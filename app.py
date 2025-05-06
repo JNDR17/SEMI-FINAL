@@ -9,7 +9,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return "This is the about page!"  # You can customize this page later.
+    return render_template('about.html')  # You can customize this page later.
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Use dynamic port or default to 5000
