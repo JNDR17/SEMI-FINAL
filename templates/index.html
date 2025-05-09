@@ -2,19 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Semi-Finals</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .floating-label {
+      position: relative;
+      margin-top: 1.5rem;
+    }
+
+    .floating-label input {
+      width: 100%;
+      padding: 1rem 0.75rem 0.25rem;
+      border: none;
+      border-bottom: 2px solid #000;
+      background-color: transparent;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .floating-label label {
+      position: absolute;
+      top: 1rem;
+      left: 0.75rem;
+      color: #4b5563; /* Gray-700 */
+      font-size: 1rem;
+      transition: 0.2s ease all;
+      pointer-events: none;
+    }
+
+    .floating-label input:focus + label,
+    .floating-label input:not(:placeholder-shown) + label {
+      top: -0.5rem;
+      left: 0.5rem;
+      font-size: 0.75rem;
+      color: #2563eb; /* Blue-600 */
+      background-color: #fefcbf; /* Yellow-200 */
+      padding: 0 0.25rem;
+      border-radius: 0.25rem;
+    }
+  </style>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="text-center p-10 bg-green-200 rounded-3xl shadow-2xl max-w-lg">
-    <p class="text-lg font-semibold">
-      Name: <span class="bg-yellow-200 px-2 py-1 rounded">Jander M. Segundo</span><br><br>
-      Section: <span class="bg-yellow-200 px-2 py-1 rounded">3rd Year (1st-25-A)</span><br><br>
-      Course: <span class="bg-yellow-200 px-2 py-1 rounded">System Integration</span><br><br>
-      <span class="text-xl font-bold underline">Semi-Final Exam</span>
-    </p>
+  <div class="bg-green-200 p-10 rounded-3xl shadow-2xl max-w-md w-full">
+    <h1 class="text-2xl font-bold text-center mb-6 underline">Semi-Final Exam</h1>
+
+    <div class="floating-label">
+      <input type="text" id="name" placeholder=" " value="Jander M. Segundo" readonly>
+      <label for="name">Name</label>
+    </div>
+
+    <div class="floating-label">
+      <input type="text" id="section" placeholder=" " value="3rd Year (1st-25-A)" readonly>
+      <label for="section">Section</label>
+    </div>
+
+    <div class="floating-label">
+      <input type="text" id="course" placeholder=" " value="System Integration" readonly>
+      <label for="course">Course</label>
+    </div>
   </div>
 </body>
 </html>
