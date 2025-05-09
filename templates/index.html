@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semi-Finals</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jander M. Segundo | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .floating-label {
@@ -25,7 +25,7 @@
       position: absolute;
       top: 1rem;
       left: 0.75rem;
-      color: #4b5563; /* Gray-700 */
+      color: #4b5563;
       font-size: 1rem;
       transition: 0.2s ease all;
       pointer-events: none;
@@ -36,20 +36,28 @@
       top: -0.5rem;
       left: 0.5rem;
       font-size: 0.75rem;
-      color: #2563eb; /* Blue-600 */
-      background-color: #fefcbf; /* Yellow-200 */
+      color: #2563eb;
+      background-color: #fefcbf;
       padding: 0 0.25rem;
       border-radius: 0.25rem;
     }
   </style>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="bg-green-200 p-10 rounded-3xl shadow-2xl max-w-md w-full">
-    <h1 class="text-2xl font-bold text-center mb-6 underline">Semi-Final Exam</h1>
 
-    <div class="floating-label">
-      <input type="text" id="name" placeholder=" " value="Jander M. Segundo" readonly>
-      <label for="name">Name</label>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-xl w-full space-y-6">
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" alt="Profile Picture" class="mx-auto rounded-full shadow-md mb-4">
+      <h1 class="text-3xl font-bold">Jander M. Segundo</h1>
+      <p class="text-gray-600 text-sm">System Integration | 3rd Year Student</p>
+    </div>
+
+    <div class="text-center">
+      <h2 class="text-xl font-semibold underline mb-2">About Me</h2>
+      <p class="text-gray-700">
+        I am a passionate system integration student currently in my third year, eager to innovate and solve real-world
+        tech problems through seamless system design and automation.
+      </p>
     </div>
 
     <div class="floating-label">
@@ -60,6 +68,20 @@
     <div class="floating-label">
       <input type="text" id="course" placeholder=" " value="System Integration" readonly>
       <label for="course">Course</label>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-semibold underline mb-2">Skills</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <li>System Architecture Design</li>
+        <li>Database Management (SQL, MongoDB)</li>
+        <li>Frontend Development (HTML, CSS, Tailwind)</li>
+        <li>API Integration & Automation</li>
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full transition duration-300">Download Resume</a>
     </div>
   </div>
 </body>
